@@ -1,6 +1,5 @@
-class Image():
-    def __init__(self, data):
-        self.data = data
+from element import Element
 
+class Image(Element):
     def to_html(self):
         return "<img src='" + self.data + "'/>"

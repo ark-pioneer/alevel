@@ -6,7 +6,7 @@ class AssertLessThan():
     def class_name(self):
         return type(self).__name__
     
-    def check_less_than(self):
+    def check(self):
         if self.value < self.expected:
             print("passed: ", self.class_name())
         else:

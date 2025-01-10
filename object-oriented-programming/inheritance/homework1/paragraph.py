@@ -1,7 +1,7 @@
-class Paragraph():
-    def __init__(self, data):
-        self.data = data
+from element import Element
 
+class Paragraph(Element):
     def to_html(self):
-        return "<p>" + self.data + "</p>"
+        opening_tag = "<p " + self.name + "='" + self.value + "'" + ">"
+        return opening_tag + self.data + "</p>"
         

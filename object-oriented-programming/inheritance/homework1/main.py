@@ -1,6 +1,7 @@
 from heading1 import Heading1
 from image import Image
 from paragraph import Paragraph
+from anchor_link import AnchorLink
 
 def build_html(elements):
     html = ""
@@ -10,7 +11,6 @@ def build_html(elements):
 
 elements = [
     Heading1("Canine Friends"),
-    Paragraph("Dogs are the best! They are lovely animals that some people treat as an additional family member"),
     Image("https://images.squarespace-cdn.com/content/v1/5baffc59fb182025fee90fef/92442d27-b354-4240-b998-bcbe0f1cd91c/German-shepherd-training-main.jpg")
 ]
 

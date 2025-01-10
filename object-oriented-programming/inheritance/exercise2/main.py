@@ -9,7 +9,4 @@ assertions = [
 ]
 
 for assertion in assertions:
-    if type(assertion) is AssertEquals:
-        assertion.check_equals()
-    elif type(assertion) is AssertLessThan:
-        assertion.check_less_than()
+    assertion.check()
