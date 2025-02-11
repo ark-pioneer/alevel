@@ -4,7 +4,7 @@ class Queue():
         self.maxsize = maxsize
 
     def enqueue(self, value):
-        if len(self.list) >= self.maxsize:
+        if self.list.size() >= self.maxsize:
             print("no more space")
         else:
             self.list.append(value)
