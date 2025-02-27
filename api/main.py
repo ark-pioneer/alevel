@@ -10,7 +10,7 @@ data = json.dumps(item)
 
 # response = requests.post(url+'/users', data=data, headers={"Content-Type": "application/json"})
 # response = requests.get(url+'/users')
-# response = requests.put(url + '/users/10', data=data, headers={"Content-Type": "application/json"})
+response = requests.put(url + '/users/10', data=data, headers={"Content-Type": "application/json"})
 response1 = requests.delete(url + '/users/3')
 response2 = requests.get(url + '/users/3')
 

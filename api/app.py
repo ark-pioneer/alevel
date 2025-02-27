@@ -39,17 +39,23 @@ def users_post():
 
 @app.put("/users/<id>")
 def users_put(id):
-    params = request.json        
+    # get data from the request body
+    payload = request.json        
+    # find the users with the given id in the URL
     with open("data.json") as f:
         data = json.load(f)
         user = [i for i in data if i["id"] == int(id)]
+    # if there is no user
     if len(user) < 1:
         return json.dumps({ "error": "no user with id: " + id})
     else:
+        # for each key value pair sent across in the request update the user
         user = user[0]
-        for key in params:
-            user[key] = params[key]
+        for key in payload:
+            user[key] = payload[key]
+        # write data to the file
         save_users(data)
+        # return data back to client
         return json.dumps(user)
 
 @app.delete("/users/<id>")
