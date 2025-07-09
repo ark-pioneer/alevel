@@ -1,0 +1,9 @@
+INP R0
+INP R1
+CMP R0, R1
+BEQ equal
+HALT
+equal: 
+ADD R2, R0, R1
+OUT R2
+HALT

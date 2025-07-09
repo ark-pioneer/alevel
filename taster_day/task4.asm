@@ -1,0 +1,4 @@
+INP R0
+ADD R1, R0, #10
+OUT R1
+HALT
