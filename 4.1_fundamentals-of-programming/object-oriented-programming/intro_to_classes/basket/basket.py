@@ -15,3 +15,6 @@ class Basket():
         for item in self.products:
             sum += item["cost"]
         return sum
+
+
+        

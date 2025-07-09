@@ -1,5 +1,3 @@
-from interface import Interface
+from app import App
 
-app = Interface()
-
-app.run()
+App().run()

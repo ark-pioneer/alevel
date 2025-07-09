@@ -2,7 +2,7 @@ from account import Account
 from statement import Statement
 
 ## this class can be broken into command pattern with user input parsing and validating
-class Interface():
+class App():
     def __init__(self, account_class=Account):
         self.account = account_class()
     

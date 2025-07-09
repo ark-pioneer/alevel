@@ -1,0 +1,26 @@
+MediaFile = Class
+                Public
+                    Procedure PlayFile
+                    Function  GetTitle
+                    Function  GetDuration
+                Private
+                    Title : String
+                    Duration : Real
+                End
+
+•        Artist: Stores the name of the band or singer that recorded the music.
+•        SampleRate: Stores the rate at which the music has been sampled.
+•        BitDepth: Stores the number of bits in which each sampled value is represented.
+
+MusicFile = Class(MediaFile)
+                Public
+                    procedure playFile ?
+                    function getArtist
+                    procedure setArtist - example only
+                    function getSampleRate
+                    function getBitDepth
+                Private
+                    Artist: String
+                    SampleRate: Integer
+                    BitDepth: Integer
+                end

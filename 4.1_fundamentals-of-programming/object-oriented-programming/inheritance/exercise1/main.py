@@ -1,49 +1,51 @@
-import math
+class Teacher():
+    def __init__(self, name, department):
+        self.name = name
+        self.department = department
+    def teach(self):
+        return "lots of teaching delivered"
+    def allocation(self):
+        return 23
 
-class Shape():
-    def __init__(self, base, height, sides):
-        self.base = base
-        self.height = height
-        self.sides = sides
-    
-    def perimeter(self):
-        sum = 0
-        for side in self.sides:
-            sum += side
-        return sum
-    
-    def area(self):
-        return self.base * self.height
+class HeadOfDepartment():
+    def __init__(self, name, department):
+        self.name = name
+        self.department = department
+    def teach(self):
+        return "lots of teaching delivered"     
+    def allocation(self):
+        return 21
 
-class Square(Shape):
-    def area(self):
-        return self.base * self.height
-        
-class Triangle(Shape):
-    def area(self):
-        return self.base * self.height * 0.5
-    
-class Circle(Shape):
-    def __init__(self, radius):
-        self.radius = radius
-        super().__init__(0,0, [])
+class TeacherAssistant():
+    def __init__(self, name, department):
+        self.name = name
+        self.department = department
+    def teach(self):
+        return "lots of teaching delivered"
+    def allocation(self):
+        return 24
 
-    def area(self):
-        return math.pi * self.radius * self.radius
+# Instructions
+# 1. identify the shared behaviour
+# 2. encapsulate the shared behaviour in a base class
+# 3. Inherit from the base class in the appropriate child classes. 
 
-    def circumference(self):
-        return math.pi * self.radius * 2
+t = Teacher("Miss B. Aviour", "Business")
+hod = HeadOfDepartment("Mr. Withers", "Computer Science")
+ta = TeacherAssistant("Mr. Smith", "Computer Science")
 
-    
-# Below doesn't change
-square = Square(5, 5, [5,5,5,5])
-triangle = Triangle(3, 4, [3,4,5])
-circle = Circle(10)
+print("teacher")
+print(t.teach())
+print(t.allocation())
 
-# print(square.area())
-# print(square.perimeter())
-# print(triangle.area())
-# print(triangle.perimeter())
-print(circle.area())
-print(circle.circumference())
-print(circle.perimeter())
+print("head of department")
+print(hod.teach())
+print(hod.allocation())
+
+print("teacher assistant")
+print(ta.teach())
+print(ta.allocation())
+
+# extension:
+# 1. Add another staff member following the pattern.
+# Inherit from two parent classes!

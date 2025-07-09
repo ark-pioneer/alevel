@@ -1,20 +1,17 @@
 class Stack():
     def __init__(self, maxsize=10):
         self.list = ['_' for i in range(maxsize)]
-        self.maxsize = maxsize
-        self.size = 0
-        self.front = 0
-        self.back = 0
+        self.top = 0
     
-    def enqueue(self, item):
-        if self.size >= self.maxsize:
+    def push(self, item):
+        if self.top >= self.maxsize:
             print("stack overflow")
         else:
             self.list[self.front] = item
             self.front += 1
             self.size += 1
         
-    def dequeue(self):
+    def pop(self):
         if self.size <= 0:
             print("stack empty")
         else:

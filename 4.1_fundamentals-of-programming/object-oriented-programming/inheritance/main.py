@@ -1,42 +1,84 @@
-class AssertLessThan():
-    def __init__(self, value, expected):
-        self.value = value
-        self.expected = expected
+# # 1 groups similar data and methods together.
+# # 2 limiting access(scope) to those data and methods.
+# # class
 
-    def class_name(self):
-        return type(self).__name__
-    
-    def check_less_than(self):
-        if self.value < self.expected:
-            print("passed: ", self.class_name())
-        else:
-            print("failed: ", self.class_name())
-            print("\texpected: True", "got: False")
-            
-class AssertEquals():
-    def __init__(self, value, expected):
-        self.value = value 
-        self.expected = expected
-    
-    def class_name(self):
-        return type(self).__name__
-    
-    def check_equals(self):
-        if self.value == self.expected:
-            print("passed: ", self.class_name())
-        else:
-            print("failed:", self.class_name())
-            print("\texpected:", self.expected, "got:", self.value)
+# class Pencil():
+#     def __init__(self, type):
+#         self.type = type
 
-assertions = [
-    AssertEquals(4,5),
-    AssertEquals("a","a"),
-    AssertLessThan(6 , 10),
-    AssertLessThan(9.2 , 3)
-]
+# p = Pencil("2B")
 
-for assertion in assertions:
-    if type(assertion) is AssertEquals:
-        assertion.check_equals()
-    elif type(assertion) is AssertLessThan:
-        assertion.check_less_than()
+
+
+
+
+
+
+
+
+# type1 = "dog"
+# hunger1 = 10
+# type2 = "cat"
+# hunger2 = 4
+
+# def update_hunger1(val):
+#     hunger1 += val
+
+# def update_hunger2(val):
+#     hunger2 += val
+
+
+
+
+
+
+# class Animal():
+#     def __init__(self, type, hunger):
+#         self.type = type
+#         self.hunger = hunger
+
+#     def update_hunger(self, val):
+#         self.hunger += val
+
+# animal1 = Animal("dog", 10)
+# animal2 = Animal("cat", 4)
+
+
+# OUTPUT "The first few prime numbers are:"
+
+# FOR Count1  2 TO 50 DO
+#   Count2  2
+#   Prime  "Yes"
+#   WHILE Count2 * Count2 <= Count1 DO
+#     IF (Count1 MOD Count2 = 0) THEN
+#       Prime  "No"
+#     ENDIF
+#     Count2  Count2 + 1
+#   ENDWHILE
+#   IF Prime = "Yes" THEN
+#     OUTPUT Count1
+#   ENDIF
+# ENDFOR
+
+isbn = []
+for count in range (0, 13):
+    print("please enter next digit of ISBN: ")
+    isbn.append(int(input()))
+
+calculated_digit = 0
+count = 0
+while count < 12:
+    calculated_digit += isbn[count]
+    count += 1
+    calculated_digit += isbn[count] * 3
+    count += 1
+
+while calculated_digit >= 10:
+    calculated_digit -= 10
+calculated_digit = 10 - calculated_digit
+if calculated_digit == 10:
+    calculated_digit = 0
+if calculated_digit == isbn[12]:
+    print("valid isbn")
+else:
+    print("invalid isbn")

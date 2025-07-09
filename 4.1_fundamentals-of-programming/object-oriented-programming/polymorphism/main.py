@@ -1,67 +1,46 @@
-# def make_quack(item):
-#     item.quack()
+# 4 Pillars of Object-Oriented Programming
+# - Why OOP? it uses classes, which groups together data and the actions that work on that data
+# - organisation of code. To reduce complexity
+# Encapsulation: reduces the scope of variables and subroutines/ limit access to identifiers
+# grouping similar methods together.
+# Inheritance: share data and behaviour from parent classes to child classes. (DRY)
+# refactoring: reorganising code 
 
-# class Duck():
-#     def quack(self):
-#         print("QUACCCCCCKKKKKKKK")
+# Polymorphism
+# Giving an action one name that is shared up and down a class hierarchy.
+# Each class in the hierarchy implements the action in a way appropriate to itself.
 
-# class Table():
-#     def quack(self):
-#         print("WAAAIT IM A TABLE")
+# In context: 
+# Polymorphism allows methods (or actions) to be called using the same name across different classes,
+# with each class providing its own specific implementation.
 
-# class Paper():
-#     def bleep(self):
-#         print("BLEEP BLEEP")
+class Animal():
+    def eat(self):
+        return 
 
-# duck = Duck()
-# table = Table()
-# paper = Paper()
+class Dog(Animal):
+    def eat(self):  # method overriding: intentionally defining the parent class method again
+                    # because the child class has a different implementation
+        print("I eat kibble")
+    
+class Cat(Animal):
+    def eat(self):
+        print("I am fussy and eat mice")
 
-# make_quack(duck)
-# make_quack(table)
-# make_quack(paper)
+# Both classes implement the same interface.
 
-def move_skateboard():
-    print("you skated 200m")
-
-def move_car():
-    print("you drove 2000m")
-
-def move_train():
-    print("you rode 20000m")
-
-vehicles = [
-    "Skateboard",
-    "Car",
-    "Train",
-    "Car"
-]
-
-for vehicle in vehicles:
-    if vehicle == "skateboard":
-        move_skateboard()
-    elif vehicle == "car":
-        move_car()
-    elif vehicle == "train":
-        move_train()
+pets = [Dog(), Cat(), Dog()]
+for pet in pets:
+    pet.eat() # this part here is the polymorphism: different classes, same behaviour
 
 
+## Method qualifiers
+# Abstract: means the method MUST be implemented by a child class
+# Virtual: means the method SHOULD be implemented by a child class
+
+## Access qualifiers
+# public: anything qualified as public means it is accessible inside and outside of the class
+# private: means it is accessible only inside of the class (weak privacy, _, __)
+# protected: means is is accessible only inside the class and any child classes (within the class hierarchy)
 
 
-# class Skateboard():
-#     def move(self):
-#         print("you skated 200m")
-# # def move_skateboard():
-# #     print("you skated 200m")
-
-# class Car():
-#     def move(self):
-#         print("you drove 2000m")
-
-# vehicles = [
-#     Skateboard(),
-#     Car()
-# ]
-
-# for vehicle in vehicles:
-#     vehicle.move()

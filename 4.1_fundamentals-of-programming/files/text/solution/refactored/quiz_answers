@@ -1,0 +1,5 @@
+Collision,A collision occurs when two key values compute the same hash.,when two are more key value pairs are stored at the same index
+Single- and multi-dimensional arrays (lists),An array is a data structure that holds a number of elements of the same data type. A singledimensional array is like a single row of values. A two-dimensional array is like a table of values.,asdf
+Dictionary,A collection of key-value pairs in which the value is accessed via the associated key.,sad
+Binary tree,A binary tree is a rooted tree in which each node has at most two children. A common application of a binary tree is as a binary search tree.,fasd
+Collision,A collision occurs when two key values compute the same hash.,fas

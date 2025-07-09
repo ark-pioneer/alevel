@@ -1,8 +1,8 @@
-import sys
+# import sys
 
-sys.path.append('../linked_lists')
-from linked_lists.linked_list import LinkedList
-from queue import Queue
+# sys.path.append('../linked_lists')
+# from linked_lists.linked_list import LinkedList
+# from queue import Queue
 
 # from priority_queue import PQueue
 # from circular_queue import CQueue
@@ -30,16 +30,21 @@ from queue import Queue
 
 # pupil = q.dequeue() # 
 # print(q.list) # back [] front
-# print(pupil) # 
-ll = LinkedList()
-q = Queue(ll)
+# # print(pupil) # 
+# ll = LinkedList()
+# q = Queue(ll)
 
-q.enqueue("a")
-q.enqueue("b")
-q.enqueue("f")
-q.enqueue("g")
-q.enqueue("z")
-print(q.list)
-print(q.dequeue())
-print(q.list)
+# q.enqueue("a")
+# q.enqueue("b")
+# q.enqueue("f")
+# q.enqueue("g")
+# q.enqueue("z")
+# print(q.list)
+# print(q.dequeue())
+# print(q.list)
 
+
+# sys.path.append('./../arrays')
+
+
+# Queue(5)

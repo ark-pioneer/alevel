@@ -1,18 +1,23 @@
 from basket import Basket
 
-# Scenario: Adding items and then calculating total cost
-basket1 = Basket(10)
+print("Welcome to the Pioneer Shopping Experience")
 
-basket1.add({"name": "bread", "cost": 5})
-basket1.add({"name": "bread", "cost": 5})
-basket1.add({"name": "water", "cost": 3})
+basket = Basket(3)
 
-# expected: printed output of 13
-print(basket1.total())
+while True: # condition controlled / indefinite v. definite or count-controlled
+    print("Options")
+    print("1. Add item")
+    print("X. Quit")
+    choice = input("> ").lower()
+    
+    if choice == "x":
+        break
+    elif choice == "1":
+        name = input("item name: ")
+        cost = int(input("item cost: "))
+        try:
+            basket.add({"name":  name, "cost": cost})
+        except ValueError as e:
+            print(e)
 
-# Scenario: adding items over capacity causes an error
-basket2 = Basket(1)
-
-basket2.add({"name": "bread", "cost": 5})
-# expected: next line causes an error
-basket2.add({"name": "bread", "cost": 5})
+print(f"Thank you for shopping. Your total is: {basket.total()}")
