@@ -1,10 +1,11 @@
-# Example application connected to a database
+# Example Python Application connected to a database
 
 ## 🧠 What you are learning
 
 - Connecting Python to a PostgreSQL database
 - Writing and running SQL queries
 - Structuring a small multi-file project
+
 
 # Quickstart
 
@@ -28,10 +29,61 @@ cp .env.example .env
 
 ### 3. Set up the database tables
 ```
-python db/setup.py
+python -m db.migrate
 ```
 
-### 4. Run the app and follow the instructions in app.py
+### 4. Seed your database tables with data
+```
+python -m db.seed
+```
+
+### 5. Run the app and follow the instructions in app.py
 ```
 python app.py
+```
+
+
+
+## Migrations vs seeds
+
+### Migrations
+Migrations change the **structure** of the database.
+
+Examples:
+- create a table
+- add a column
+- add a foreign key
+- add a unique constraint
+
+Store these in:
+
+```text
+db/migrations/
+```
+
+### Seeds
+Seeds insert **sample / default data**.
+
+Examples:
+- default users
+- role lookup data
+- sample courses
+- sample enrolments
+- sample assignments
+
+Store these in:
+
+```text
+db/seeds/
+```
+
+
+## Migration worflow
+Use the migration helper script to create a new SQL file inside db/migrations. For example:
+```
+python db/create_migration.py "create enrolments"
+```
+Then add the sql you want to execute to the generated file. Afterwards, run the migrations
+```
+python -m db.migrate
 ```

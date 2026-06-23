@@ -31,7 +31,7 @@ def create_migration(description, directory = MIGRATIONS_DIR):
 
 if __name__ == "__main__":
     if len(sys.argv) < 2:
-        print("Usage: python create_migration.py \"description_here\"")
+        print("Usage: python db/create_migration.py \"description_here\"")
         raise SystemExit(1)
 
     description = " ".join(sys.argv[1:])
