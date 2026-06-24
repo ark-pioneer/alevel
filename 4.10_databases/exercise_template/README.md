@@ -77,7 +77,6 @@ Store these in:
 db/seeds/
 ```
 
-
 ## Migration worflow
 Use the migration helper script to create a new SQL file inside db/migrations. For example:
 ```
@@ -87,3 +86,7 @@ Then add the sql you want to execute to the generated file. Afterwards, run the 
 ```
 python -m db.migrate
 ```
+
+## psycopg documentation
+
+Use the official usage [docs](https://www.psycopg.org/psycopg3/docs/basic/usage.html) to understand how it works
